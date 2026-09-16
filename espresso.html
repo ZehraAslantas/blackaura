@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="dark">
+    <head>
+         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" initial-scale="1">
+        <title>KAHVE DÜNYASI | MENÜ</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+        <body class="bg-dark">
+        <header >
+            <nav class="navbar bg-body-tertiary">
+              <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                     <img src="resim/blackaura.jpeg" class=" border border-dark rounded-circle me-2" 
+                     style="width: 100px; height: 100px; object-fit: cover;"><strong>BLACK AURA COFFEE</strong></a>
+                     <!--logoyu ekledik link şeklinde ve boyutunu yazdık.d-flex yan yana durmalarını sağladı
+                     resim ve yazının hangisine tıklasan da tek link şeklinde-->
+                <button class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="offcanvas" 
+                data-bs-target="#bilgiPaneli" 
+                aria-controls="bilgiPaneli" 
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+            </nav>
+        </header>
+        
+        <main class="container my-5">
+            <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-3">
+                         <!--kartlar arasına dikey ve yatayda eşit ızgara boşluğu koyar.-->
+                <div class="card product-card">
+           <img src="resim/espressoresim/espresso.avif" class="card-img-top" alt="espresso" style="height: 220px; object-fit: cover;">
+             <div class="card-body">
+                <div>
+                    <h5 class="card-title fst-italic fw-bold">Espresso</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <select class="form-select" aria-label="Default select example" onchange="updatePrice(this)">
+                <option value="kücük" data-price="130">Küçük</option>
+              <option value="orta" data-price="150" selected>Orta</option>
+              <option value="büyük" data-price="170">Büyük</option>
+          </select>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+            <!--burda div e verilen class fiyat ve seete ekle butonu arası mesafe ayarı için-->
+          <span class="fw-bold fs-5 text-success price-display ">150 ₺</span>
+          <button type="button" class="btn btn-secondary btn-sm">Sepete Ekle</button>
+           </div>
+              </div>
+            </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card product-card">
+           <img src="resim/espressoresim/americano.avif" class="card-img-top" alt="americano" style="height: 220px; object-fit: cover;">
+             <div class="card-body">
+                <div>
+                    <h5 class="card-title fst-italic fw-bold">Americano</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <select class="form-select" aria-label="Default select example" onchange="updatePrice(this)">
+                <option value="kücük" data-price="180">Küçük</option>
+              <option value="orta" data-price="200" selected>Orta</option>
+              <option value="büyük" data-price="220">Büyük</option>
+          </select>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <!--burda div e verilen class fiyat ve seete ekle butonu arası mesafe ayarı için-->
+          <span class="fw-bold fs-5 text-success price-display ">200 ₺</span>
+          <button type="button" class="btn btn-secondary btn-sm">Sepete Ekle</button>
+           </div>
+              </div>
+            </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card product-card">
+           <img src="resim/espressoresim/latte.avif" id="latte" class="card-img-top" alt="latte" class="card-img-top" alt="latte" style="height: 220px;
+object-fit: cover;" >
+             <div class="card-body">
+                <div>
+                    <h5 class="card-title fst-italic fw-bold">Latte</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <select class="form-select" aria-label="Default select example" onchange="updatePrice(this)">
+                <option value="kücük" data-price="215">Küçük</option>
+              <option value="orta" data-price="225" selected>Orta</option>
+              <option value="büyük" data-price="240">Büyük</option>
+          </select>
+              <div class="d-flex justify-content-between align-items-center" mt-3>
+            <!--burda div e verilen class fiyat ve seete ekle butonu arası mesafe ayarı için-->
+          <span class="fw-bold fs-5 text-success price-display">225 ₺</span>
+          <button type="button" class="btn btn-secondary btn-sm">Sepete Ekle</button>
+           </div>
+              </div>
+            </div>
+            </div>
+                       <div class="col-12 col-md-6 col-lg-3">
+                         <!--kartlar arasına dikey ve yatayda eşit ızgara boşluğu koyar.-->
+                <div class="card product-card">
+           <img src="resim/espressoresim/vanilyalilatte.avif" class="card-img-top" alt="vanilyalilatte" class="card-img-top" alt="Espresso" style="height: 220px; object-fit: cover;">
+             <div class="card-body">
+                <div>
+                    <h5 class="card-title fst-italic fw-bold">Vanilyalı Latte</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <select class="form-select" aria-label="Default select example" onchange="updatePrice(this)">
+                <option value="kücük" data-price="240">Küçük</option>
+              <option value="orta" data-price="260" selected>Orta</option>
+              <option value="büyük" data-price="275">Büyük</option>
+          </select>
+              <div class="d-flex justify-content-between align-items-center" mt-3>
+            <!--burda div e verilen class fiyat ve seete ekle butonu arası mesafe ayarı için-->
+          <span class="fw-bold fs-5 text-success price-display">260 ₺</span>
+          <button type="button" class="btn btn-secondary btn-sm">Sepete Ekle</button>
+           </div>
+              </div>
+            </div>
+            </div>
+                       <div class="col-12 col-md-6 col-lg-3">
+                         <!--kartlar arasına dikey ve yatayda eşit ızgara boşluğu koyar.-->
+                <div class="card product-card">
+           <img src="resim/espressoresim/bademlilatte.avif" class="card-img-top" alt="bademlilatte" style="height: 220px; object-fit: cover;">
+             <div class="card-body">
+                <div>
+                    <h5 class="card-title fst-italic fw-bold">Bademli Latte</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <select class="form-select" aria-label="Default select example" onchange="updatePrice(this)">
+                <option value="kücük" data-price="250">Küçük</option>
+              <option value="orta" data-price="265" selected>Orta</option>
+              <option value="büyük" data-price="280">Büyük</option>
+          </select>
+              <div class="d-flex justify-content-between align-items-center" mt-3>
+            <!--burda div e verilen class fiyat ve seete ekle butonu arası mesafe ayarı için-->
+          <span class="fw-bold fs-5 text-success price-display">265 ₺</span>
+          <button type="button" class="btn btn-secondary btn-sm">Sepete Ekle</button>
+           </div>
+              </div>
+            </div>
+            </div>
+
+                       <div class="col-12 col-md-6 col-lg-3">
+                         <!--kartlar arasına dikey ve yatayda eşit ızgara boşluğu koyar.-->
+                <div class="card product-card">
+           <img src="resim/espressoresim/mocha.avif" id="mocha" class="card-img-top" alt="mocha" style="height: 220px; object-fit: cover;" >
+             <div class="card-body">
+                <div>
+                    <h5 class="card-title fst-italic fw-bold">Mocha</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <select class="form-select" aria-label="Default select example" onchange="updatePrice(this)">
+                <option value="kücük" data-price="260">Küçük</option>
+              <option value="orta" data-price="270" selected>Orta</option>
+              <option value="büyük" data-price="280">Büyük</option>
+          </select>
+              <div class="d-flex justify-content-between align-items-center" mt-3>
+            <!--burda div e verilen class fiyat ve seete ekle butonu arası mesafe ayarı için-->
+          <span class="fw-bold fs-5 text-success price-display">270 ₺</span>
+          <button type="button" class="btn btn-secondary btn-sm">Sepete Ekle</button>
+           </div>
+              </div>
+            </div>
+            </div>
+                       <div class="col-12 col-md-6 col-lg-3">
+                         <!--kartlar arasına dikey ve yatayda eşit ızgara boşluğu koyar.-->
+                <div class="card product-card">
+           <img src="resim/espressoresim/whitemocha.avif" class="card-img-top" alt="whitemocha" style="height: 220px; object-fit: cover; ">
+             <div class="card-body">
+                <div>
+                    <h5 class="card-title fst-italic fw-bold">White Chocolate Mocha</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <select class="form-select" aria-label="Default select example" onchange="updatePrice(this)">
+                 <option value="kücük" data-price="270">Küçük</option>
+              <option value="orta" data-price="290" selected>Orta</option>
+              <option value="büyük" data-price="310">Büyük</option>
+          </select>
+              <div class="d-flex justify-content-between align-items-center" mt-3>
+            <!--burda div e verilen class fiyat ve seete ekle butonu arası mesafe ayarı için-->
+          <span class="fw-bold fs-5 text-success price-display">290 ₺</span>
+          <button type="button" class="btn btn-secondary btn-sm">Sepete Ekle</button>
+           </div>
+              </div>
+            </div>
+            </div>
+                       <div class="col-12 col-md-6 col-lg-3">
+                         <!--kartlar arasına dikey ve yatayda eşit ızgara boşluğu koyar.-->
+                <div class="card product-card">
+           <img src="resim/espressoresim/ristretto.avif" class="card-img-top" alt="ristretto" style="height: 220px; object-fit: cover;">
+             <div class="card-body">
+                <div>
+                    <h5 class="card-title fst-italic fw-bold">Ristretto</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <select class="form-select" aria-label="Default select example" onchange="updatePrice(this)">
+                <option value="kücük" data-price="130">Küçük</option>
+              <option value="orta" data-price="150" selected>Orta</option>
+              <option value="büyük" data-price="165">Büyük</option>
+          </select>
+              <div class="d-flex justify-content-between align-items-center" mt-3>
+            <!--burda div e verilen class fiyat ve seete ekle butonu arası mesafe ayarı için-->
+          <span class="fw-bold fs-5 text-success price-display">150 ₺</span>
+          <button type="button" class="btn btn-secondary btn-sm">Sepete Ekle</button>
+           </div>
+              </div>
+            </div>
+            </div>
+                       <div class="col-12 col-md-6 col-lg-3">
+                         <!--kartlar arasına dikey ve yatayda eşit ızgara boşluğu koyar.-->
+                <div class="card product-card">
+           <img src="resim/espressoresim/doppio.avif" class="card-img-top" alt="doppio" style="height: 220px; object-fit: cover;">
+             <div class="card-body">
+                <div>
+                    <h5 class="card-title fst-italic fw-bold">Doppio</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <select class="form-select" aria-label="Default select example" onchange="updatePrice(this)">
+                <option value="kücük" data-price="155">Küçük</option>
+              <option value="orta" data-price="175" selected>Orta</option>
+              <option value="büyük" data-price="190">Büyük</option>
+          </select>
+              <div class="d-flex justify-content-between align-items-center" mt-3>
+            <!--burda div e verilen class fiyat ve seete ekle butonu arası mesafe ayarı için-->
+          <span class="fw-bold fs-5 text-success price-display">175 ₺</span>
+          <button type="button" class="btn btn-secondary btn-sm">Sepete Ekle</button>
+           </div>
+              </div>
+            </div>
+            </div>
+                       <div class="col-12 col-md-6 col-lg-3">
+                         <!--kartlar arasına dikey ve yatayda eşit ızgara boşluğu koyar.-->
+                <div class="card product-card">
+           <img src="resim/espressoresim/lungoavif.avif" id="lungo" class="card-img-top" alt="lungo" style="height: 220px; object-fit: cover;">
+             <div class="card-body">
+                <div>
+                    <h5 class="card-title fst-italic fw-bold">Lungo</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <select class="form-select" aria-label="Default select example" onchange="updatePrice(this)">
+                 <option value="kücük" data-price="135">Küçük</option>
+              <option value="orta" data-price="155" selected>Orta</option>
+              <option value="büyük" data-price="170">Büyük</option>
+          </select>
+              <div class="d-flex justify-content-between align-items-center" mt-3>
+            <!--burda div e verilen class fiyat ve seete ekle butonu arası mesafe ayarı için-->
+          <span class="fw-bold fs-5 text-success price-display">155 ₺</span>
+          <button type="button" class="btn btn-secondary btn-sm">Sepete Ekle</button>
+           </div>
+              </div>
+            </div>
+            </div>
+                       <div class="col-12 col-md-6 col-lg-3">
+                         <!--kartlar arasına dikey ve yatayda eşit ızgara boşluğu koyar.-->
+                <div class="card product-card">
+           <img src="resim/espressoresim/flatwhite.avif" class="card-img-top" alt="flatwhite">
+             <div class="card-body">
+                <div>
+                    <h5 class="card-title fst-italic fw-bold">Flat White</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <select class="form-select" aria-label="Default select example" onchange="updatePrice(this)">
+                <option value="kücük" data-price="210">Küçük</option>
+              <option value="orta" data-price="220" selected>Orta</option>
+              <option value="büyük" data-price="230">Büyük</option>
+          </select>
+              <div class="d-flex justify-content-between align-items-center" mt-3>
+            <!--burda div e verilen class fiyat ve seete ekle butonu arası mesafe ayarı için-->
+          <span class="fw-bold fs-5 text-success price-display">220 ₺</span>
+          <button type="button" class="btn btn-secondary btn-sm">Sepete Ekle</button>
+           </div>
+              </div>
+            </div>
+            </div>
+                       <div class="col-12 col-md-6 col-lg-3">
+                         <!--kartlar arasına dikey ve yatayda eşit ızgara boşluğu koyar.-->
+                <div class="card product-card">
+           <img src="resim/espressoresim/espressomachiato.avif" id="espressomachiato" class="card-img-top" alt="espressomachiato" style="height: 220px; object-fit: cover;">
+             <div class="card-body">
+                <div>
+                    <h5 class="card-title fst-italic fw-bold">Espresso Macchiato</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <select class="form-select" aria-label="Default select example" onchange="updatePrice(this)">
+                <option value="kücük" data-price="150">Küçük</option>
+              <option value="orta" data-price="170" selected>Orta</option>
+              <option value="büyük" data-price="200">Büyük</option>
+          </select>
+              <div class="d-flex justify-content-between align-items-center" mt-3>
+            <!--burda div e verilen class fiyat ve seete ekle butonu arası mesafe ayarı için-->
+          <span class="fw-bold fs-5 text-success price-display">170 ₺</span>
+          <button type="button" class="btn btn-secondary btn-sm">Sepete Ekle</button>
+           </div>
+              </div>
+            </div>
+            </div>
+                       <div class="col-12 col-md-6 col-lg-3">
+                         <!--kartlar arasına dikey ve yatayda eşit ızgara boşluğu koyar.-->
+                <div class="card product-card">
+           <img src="resim/espressoresim/caramelmacchiato.avif" class="card-img-top" alt="caramelmacchiato" style="height: 220px; object-fit: cover;">
+             <div class="card-body">
+                <div>
+                    <h5 class="card-title fst-italic fw-bold">Caramel Macchiato</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <select class="form-select" aria-label="Default select example" onchange="updatePrice(this)">
+                <option value="kücük" data-price="250">Küçük</option>
+              <option value="orta" data-price="265" selected>Orta</option>
+              <option value="büyük" data-price="280">Büyük</option>
+          </select>
+              <div class="d-flex justify-content-between align-items-center" mt-3>
+            <!--burda div e verilen class fiyat ve seete ekle butonu arası mesafe ayarı için-->
+          <span class="fw-bold fs-5 text-success price-display">265 ₺</span>
+          <button type="button" class="btn btn-secondary btn-sm">Sepete Ekle</button>
+           </div>
+              </div>
+            </div>
+            </div>
+                       <div class="col-12 col-md-6 col-lg-3">
+                         <!--kartlar arasına dikey ve yatayda eşit ızgara boşluğu koyar.-->
+                <div class="card product-card">
+           <img src="resim/espressoresim/cortado.avif" id="cortado" class="card-img-top" alt="cortado" style="height: 220px; object-fit: cover;">
+             <div class="card-body">
+                <div>
+                    <h5 class="card-title fst-italic fw-bold">Cortado</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <select class="form-select" aria-label="Default select example" onchange="updatePrice(this)">
+                <option value="kücük" data-price="210">Küçük</option>
+              <option value="orta" data-price="235" selected>Orta</option>
+              <option value="büyük" data-price="250">Büyük</option>
+          </select>
+              <div class="d-flex justify-content-between align-items-center" mt-3>
+            <!--burda div e verilen class fiyat ve seete ekle butonu arası mesafe ayarı için-->
+          <span class="fw-bold fs-5 text-success price-display">235 ₺</span>
+          <button type="button" class="btn btn-secondary btn-sm">Sepete Ekle</button>
+           </div>
+              </div>
+            </div>
+            </div>
+                       <div class="col-12 col-md-6 col-lg-3">
+                         <!--kartlar arasına dikey ve yatayda eşit ızgara boşluğu koyar.-->
+                <div class="card product-card">
+           <img src="resim/espressoresim/cappuccino.avif" class="card-img-top" alt="cappuccino" style="height: 220px; object-fit: cover;">
+             <div class="card-body">
+                <div>
+                    <h5 class="card-title fst-italic fw-bold">Cappuccino</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <select class="form-select" aria-label="Default select example" onchange="updatePrice(this)">
+                <option value="kücük" data-price="210">Küçük</option>
+              <option value="orta" data-price="235" selected>Orta</option>
+              <option value="büyük" data-price="255">Büyük</option>
+          </select>
+              <div class="d-flex justify-content-between align-items-center" mt-3>
+            <!--burda div e verilen class fiyat ve seete ekle butonu arası mesafe ayarı için-->
+          <span class="fw-bold fs-5 text-success price-display">235 ₺</span>
+          <button type="button" class="btn btn-secondary btn-sm">Sepete Ekle</button>
+           </div>
+              </div>
+            </div>
+            </div>
+                       <div class="col-12 col-md-6 col-lg-3">
+                         <!--kartlar arasına dikey ve yatayda eşit ızgara boşluğu koyar.-->
+                <div class="card product-card">
+           <img src="resim/espressoresim/longblack.avif" class="card-img-top" alt="longblack" style="height: 220px; object-fit: cover;">
+             <div class="card-body">
+                <div>
+                    <h5 class="card-title fst-italic fw-bold">Long Black</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <select class="form-select" aria-label="Default select example" onchange="updatePrice(this)">
+                <option value="kücük" data-price="185">Küçük</option>
+              <option value="orta" data-price="210" selected>Orta</option>
+              <option value="büyük" data-price="235">Büyük</option>
+          </select>
+              <div class="d-flex justify-content-between align-items-center" mt-3>
+            <!--burda div e verilen class fiyat ve seete ekle butonu arası mesafe ayarı için-->
+          <span class="fw-bold fs-5 text-success price-display">210 ₺</span>
+          <button type="button" class="btn btn-secondary btn-sm">Sepete Ekle</button>
+           </div>
+              </div>
+            </div>
+            </div>
+            </div>
+        </main>
+
+        <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1"  id="bilgiPaneli" aria-labelledby="offcanvasDarkLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkLabel">☕ MAĞAZA BİLGİLERİ & İLETİŞİM</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <p>Black Aura Coffee 6 ülkede toplam 1000'e yakın satış noktası bulunan bir kafedir.
+                   Öğütülmüş kahve çeşitleri ile zengin lezzetler sizi beklemektedir.
+                </p>
+          </div>
+          <div class="offcanvas-body">
+             <img src="resim/cekirdekkahve.jpg" style="width: 350px; height: 350px; ">
+            </div>
+  <div class="offcanvas-body">
+    <div class="container" >
+      <div class="row ">
+        <div class="col-12 col-md-12">
+            <h6 class="fw-bold border-bottom ">Hakkımızda</h6>
+            <div>
+              <p>Black Aura Coffee, Türkiye merkezli bir kahve ve çikolata markası olarak
+                faaliyet gösteren, perakende kafe işletmeciliği
+                 ile üretim alanlarını bir araya getiren bir kuruluştur.</p>
+            </div>
+            
+        <div class="col-12 col-md-12 ">
+            <h6 class="fw-bold border-bottom pb-2">İletişim & Adres</h6>
+            <ul>
+              <li>İletişim: 0346 798 83 83</li>
+              <li>Adres: Gültepe Mah. Farabi Cd. No:22
+                <br>
+                58080 Okullar Bölgesi 
+                <br>
+                Sivas/Merkez</li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-12">
+            <h6 class="fw-bold border-bottom pb-2">Sıkça Sorulan Sorular</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div> 
+            </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        
+        <script>
+          function updatePrice(selectElement) {
+            // Seçilen seçeneği (option) yakala
+              const selectedOption = selectElement.options[selectElement.selectedIndex];
+             // data-price değerini al
+               const price = selectedOption.getAttribute('data-price');
+              // Eğer geçerli bir fiyat varsa kartın içindeki price-display alanını güncelle
+               if (price) {
+             const cardBody = selectElement.closest('.card-body');
+             const priceDisplay = cardBody.querySelector('.price-display');
+                  priceDisplay.textContent = price + ' ₺';
+              }
+          }
+          </script> 
+      
+      </body>       
+</html>

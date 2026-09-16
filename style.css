@@ -1,0 +1,52 @@
+
+.card {
+    height: 100%; /* Sayfa düzeninde kartların eşit boyda durmasını sağlar */
+    display: flex;
+    flex-direction: column;
+    overflow:hidden;
+}
+.card img{
+  width: 100% !important;
+  border-top-left-radius: calc(0.375rem - 1px) ;
+  border-top-right-radius: calc(0.375rem - 1px) ;
+}
+#kahve, #soguk {
+  height: 450px;
+}
+
+#filtre{
+  height: 400px;
+}
+#col-md-6{
+  width: 850px;
+}
+/*espresso.html*/
+#latte{
+object-position: center bottom;
+}
+ #mocha{
+  object-position: 50% 90%;
+ }
+#cortado , #espressomachiato{
+  object-position: 50% 75%;
+}
+#lungo {
+  object-position: 50% 88%;
+}
+#filtreee{
+  object-position: 50% 80%;
+}
+/*sogukkahve.html*/
+.coffeeicedamericano , .coffeecoldbrew{
+  object-position: 50% 65%;
+}
+.coffeefrappe{
+  object-position: 50% 70%;
+}
+.coffeeicedcappuccino , .coffeicedwhitemocha{
+  object-position: 50% 65%;
+}
+/*paketkahveler*/
+.paketkahveler{
+  object-position: bottom;
+}
